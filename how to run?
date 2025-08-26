@@ -1,0 +1,9 @@
+ 🧮 BMI Calculator
+
+A simple Python project to calculate *Body Mass Index (BMI)* from weight and height.
+
+## 🚀 How to Run
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/your-username/bmi_calculator.git
+   cd bmi_calculator
