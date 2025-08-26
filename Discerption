@@ -1,0 +1,5 @@
+bmi_calculator/
+│
+├── bmi.py          # الكود الرئيسي
+├── README.md       # وصف المشروع
+└── sample_run.png  # صورة توضح النتيجة (اختيارية)
