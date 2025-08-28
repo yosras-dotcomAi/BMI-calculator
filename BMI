@@ -1,0 +1,42 @@
+"""
+BMI Calculator Project
+Author: Yosra Mohamed Saied Ngar
+Description:
+A simple command-line program to calculate Body Mass Index (BMI).
+The program asks the user to input their weight (kg) and height (cm),
+then calculates the BMI and provides a health category.
+"""
+
+def calculate_bmi(weight: float, height: float) -> float:
+    """Calculate BMI using weight (kg) and height (cm)."""
+    height_m = height / 100  # convert height to meters
+    bmi = weight / (height_m ** 2)
+    return round(bmi, 2)
+
+def bmi_category(bmi: float) -> str:
+    """Return BMI category according to WHO classification."""
+    if bmi < 18.5:
+        return "Underweight"
+    elif 18.5 <= bmi < 24.9:
+        return "Normal weight"
+    elif 25 <= bmi < 29.9:
+        return "Overweight"
+    else:
+        return "Obesity"
+
+def main():
+    print("=== BMI Calculator ===")
+    try:
+        weight = float(input("Enter your weight (kg): "))
+        height = float(input("Enter your height (cm): "))
+
+        bmi = calculate_bmi(weight, height)
+        category = bmi_category(bmi)
+
+        print(f"\nYour BMI is: {bmi}")
+        print(f"Category: {category}")
+    except ValueError:
+        print("Invalid input. Please enter numeric values only.")
+
+if __name__ == "__main__":
+    main()
